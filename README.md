@@ -43,7 +43,7 @@ pip install numpy==1.24.0
 Some models require HuggingFace login and access approval. Run the following before using gated models:
 ```bash
 huggingface-cli login
-```
+
 
 Then request access to the following models on HuggingFace:
 - [MahmoodLab/CONCH](https://huggingface.co/MahmoodLab/CONCH)
@@ -65,68 +65,50 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
 
 ## Usage
 
-### Trident built-in models (conch, musk)
+### Step 1: Run the first model with `--task all` (generates seg + coords + feat)
 ```bash
-# conch
 python run_batch_of_slides.py --task all \
     --patch_encoder conch_v1 \
     --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
+    --job_dir /path/to/output/conch \
     --mag 20 --patch_size 256 --gpu 0
+```
 
+### Step 2: Run remaining models reusing seg and coords (task set to feat)
+
+Use `--seg_dir` to reuse existing segmentation results and `--coords_dir` to reuse existing patch coordinates. This avoids redundant computation and saves storage space.
+```bash
 # musk
-python run_batch_of_slides.py --task all \
+python run_batch_of_slides.py --task feat \
     --patch_encoder musk \
     --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
+    --job_dir /path/to/output/musk \
+    --seg_dir /path/to/output/conch \
+    --coords_dir /path/to/output/conch/20.0x_256px_0px_overlap \
     --mag 20 --patch_size 256 --gpu 0
+
+# custom encoders
+for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar; do
+    python run_with_custom_fm.py --task all \
+        --model $model \
+        --wsi_dir /path/to/wsis \
+        --job_dir /path/to/output/$model \
+        --seg_dir /path/to/output/conch \
+        --coords_dir /path/to/output/conch/20.0x_256px_0px_overlap \
+        --mag 20 --patch_size 256 --gpu 0
+done
 ```
 
-### Custom models — no local checkpoint needed
+### Step 3: mi-zero (requires separate job_dir due to different patch_size)
+
+mi-zero uses `patch_size=448` and must generate its own seg and coords 
 ```bash
-# plip
-python run_with_custom_fm.py --task all \
-    --model plip \
-    --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
-    --mag 20 --patch_size 256 --gpu 0
-
-# keep
-python run_with_custom_fm.py --task all \
-    --model keep \
-    --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
-    --mag 20 --patch_size 256 --gpu 0
-
-# pathgen-clip
-python run_with_custom_fm.py --task all \
-    --model pathgen-clip \
-    --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
-    --mag 20 --patch_size 256 --gpu 0
-
-# biomedclip-v2
-python run_with_custom_fm.py --task all \
-    --model biomedclip-v2 \
-    --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
-    --mag 20 --patch_size 256 --gpu 0
-
-# patho-clip
-python run_with_custom_fm.py --task all \
-    --model patho-clip \
-    --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
-    --mag 20 --patch_size 256 --gpu 0
-```
-
-### Custom models — local checkpoint required
-```bash
-# mi-zero (patch_size must be 448)
 python run_with_custom_fm.py --task all \
     --model mi-zero \
     --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output \
+    --job_dir /path/to/output/mi-zero \
     --mag 20 --patch_size 448 --gpu 0 \
     --ckpt_path /path/to/epoch_50.pt
 ```
+
+> ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
