@@ -36,14 +36,14 @@ pip install transformers==4.44.0
 pip install open_clip_torch
 pip install timm==0.9.16
 pip install numpy==1.24.0
-
+```
 
 ## HuggingFace Setup
 
 Some models require HuggingFace login and access approval. Run the following before using gated models:
 ```bash
 huggingface-cli login
-
+```
 
 Then request access to the following models on HuggingFace:
 - [MahmoodLab/CONCH](https://huggingface.co/MahmoodLab/CONCH)
