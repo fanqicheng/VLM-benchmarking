@@ -62,7 +62,6 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
    - PubMedBERT: `ctranspath_448_pubmedbert/checkpoints/epoch_50.pt`
 4. Place it anywhere on your server and pass the path via `--ckpt_path`
 
-
 ## Usage
 
 ### Step 1: Run the first model with `--task all` (generates seg + coords + feat)
