@@ -9,6 +9,7 @@ python run_batch_of_slides.py --task all --wsi_dir output/wsis --job_dir output 
 import os
 import argparse
 import torch
+import shutil
 from typing import Any
 
 from trident import Processor 
@@ -39,6 +40,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument('--batch_size', type=int, default=64, 
                         help="Batch size used for segmentation and feature extraction. Will be override by"
                         "`seg_batch_size` and `feat_batch_size` if you want to use different ones. Defaults to 64.")
+    
 
     # Caching argument for fast WSI processing
     parser.add_argument(
@@ -112,6 +114,8 @@ def build_parser() -> argparse.ArgumentParser:
                         help='Slide encoder to use')
     parser.add_argument('--feat_batch_size', type=int, default=None, 
                         help='Batch size for feature extraction. Defaults to None (use `batch_size` argument instead).')
+    parser.add_argument('--seg_dir', type=str, default=None,
+                    help='Path to existing segmentation results to reuse')
     return parser
 
 
@@ -165,6 +169,7 @@ def initialize_processor(args: argparse.Namespace) -> Processor:
         max_workers=args.max_workers,
         reader_type=args.reader_type,
         search_nested=args.search_nested,
+        seg_dir=args.seg_dir if hasattr(args, 'seg_dir') else None, 
     )
 
 
