@@ -29,6 +29,7 @@ class Processor:
         max_workers: Optional[int] = None,
         reader_type: Optional[WSIReaderType] = None,
         search_nested: bool = False, 
+        seg_dir: Optional[str] = None,
     ) -> None:
         """
         The `Processor` class handles all preprocessing steps starting from whole-slide images (WSIs). 
@@ -112,6 +113,7 @@ class Processor:
         self.skip_errors = skip_errors
         self.custom_mpp_keys = custom_mpp_keys
         self.max_workers = max_workers
+        self.seg_dir = seg_dir
 
         # Validate extensions
         assert isinstance(self.wsi_ext, list), f'wsi_ext must be a list, got {type(self.wsi_ext)}'
@@ -148,8 +150,9 @@ class Processor:
         try:
             for wsi_idx, abs_path in enumerate(full_paths):
                 name = os.path.basename(abs_path)
+                seg_source = seg_dir if seg_dir is not None else self.job_dir
                 tissue_seg_path = os.path.join(
-                    self.job_dir, 'contours_geojson',
+                    seg_source, 'contours_geojson',
                     f'{splitext(name)[0]}.geojson'
                 )
                 if not os.path.exists(tissue_seg_path):
@@ -226,7 +229,8 @@ class Processor:
         self.loop = tqdm(self.wsis, desc='Segmenting tissue', total = len(self.wsis))
         for wsi in self.loop:   
             # Check if contour already exists
-            if os.path.exists(os.path.join(saveto, f'{wsi.name}.jpg')) and not is_locked(os.path.join(saveto, f'{wsi.name}.jpg')):
+            seg_check_dir = os.path.join(self.seg_dir, 'contours') if self.seg_dir is not None else saveto
+            if os.path.exists(os.path.join(seg_check_dir, f'{wsi.name}.jpg')) and not is_locked(os.path.join(seg_check_dir, f'{wsi.name}.jpg')):
                 self.loop.set_postfix_str(f'{wsi.name} already segmented. Skipping...')
                 update_log(os.path.join(self.job_dir, '_logs_segmentation.txt'), f'{wsi.name}{wsi.ext}', 'Tissue segmented.')
                 continue
