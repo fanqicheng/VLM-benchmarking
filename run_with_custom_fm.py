@@ -1,17 +1,16 @@
+import os
 from trident.patch_encoder_models import CustomInferenceEncoder
 from load_model_trident import load_fm, FM_REGISTRY
 from run_batch_of_slides import build_parser, initialize_processor, run_task
 
 
 class FMInferenceEncoder(CustomInferenceEncoder):
-    """覆写 forward，用 encode_image 而不是直接调用 model"""
     def __init__(self, fm, **kwargs):
         super().__init__(**kwargs)
         self._encode_image = fm.encode_image
 
     def forward(self, x):
         return self._encode_image(x)
-
 
 def main():
     parser = build_parser()
@@ -43,14 +42,22 @@ def main():
 
     for task_name in tasks:
         args.task = task_name
+        if task_name == 'coords' and args.coords_dir is not None:
+            print(f'[COORDS] Using existing coords from {args.coords_dir}, skipping coords generation.')
+            continue
         if task_name == 'feat':
             coords_dir = args.coords_dir or f'{args.mag}x_{args.patch_size}px_{args.overlap}px_overlap'
+            saveto = os.path.join(
+                f'{args.mag}x_{args.patch_size}px_{args.overlap}px_overlap',
+                f'features_{encoder.enc_name}'
+            )
             processor.run_patch_feature_extraction_job(
                 coords_dir=coords_dir,
                 patch_encoder=encoder,
                 device=f'cuda:{args.gpu}',
                 saveas='h5',
                 batch_limit=args.feat_batch_size or args.batch_size,
+                saveto=saveto,
             )
         else:
             run_task(processor, args)
