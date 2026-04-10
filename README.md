@@ -14,6 +14,7 @@ This repository extends [Trident](https://github.com/mahmoodlab/TRIDENT) to supp
 | `biomedclip-v2` | `run_with_custom_fm.py` | 256 | Public |
 | `patho-clip` | `run_with_custom_fm.py` | 256 | Requires HF login + access |
 | `mi-zero` | `run_with_custom_fm.py` | 448 | Requires manual checkpoint download |
+| `quiltnet` | `run_with_custom_fm.py` | 256 | Public |
 
 ## Installation
 
@@ -87,7 +88,7 @@ python run_batch_of_slides.py --task feat \
     --mag 20 --patch_size 256 --gpu 0
 
 # custom encoders
-for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar; do
+for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet; do
     python run_with_custom_fm.py --task all \
         --model $model \
         --wsi_dir /path/to/wsis \
