@@ -1951,6 +1951,41 @@ def load_cpath_clip(
     attach_text_adapter(fm, tokenizer=tokenizer, device=device)
     return fm
 
+# ============================================================
+# QuiltNet-B-16
+# https://huggingface.co/wisdomik/QuiltNet-B-16
+# ============================================================
+@register_fm("quiltnet")
+def load_quiltnet(device: str = "cuda:0") -> FMWrapper:
+    _ensure_packages(open_clip="open_clip_torch")
+    import open_clip
+
+    model, _, preprocess_fn = open_clip.create_model_and_transforms(
+        'hf-hub:wisdomik/QuiltNet-B-16'
+    )
+    tokenizer = open_clip.get_tokenizer('hf-hub:wisdomik/QuiltNet-B-16')
+    model = model.to(device).eval()
+
+    def _preprocess(pil_img: Image.Image) -> torch.Tensor:
+        return preprocess_fn(pil_img.convert("RGB"))
+
+    def _encode_image(img_batch: torch.Tensor) -> torch.Tensor:
+        with torch.no_grad():
+            feat = model.encode_image(img_batch)
+            feat = torch.nn.functional.normalize(feat, p=2, dim=-1)
+        return feat
+
+    fm = FMWrapper(
+        name="quiltnet",
+        model=model,
+        preprocess=_preprocess,
+        has_text_encoder=True,
+        encode_image=_encode_image,
+        encode_text=None,
+        image_size=224,
+    )
+    return fm
+
 if __name__ == "__main__":
     print("Available models:", list(FM_REGISTRY.keys()))
 
