@@ -106,6 +106,8 @@ done
 Extracts patch-level features from UnitoPatho WSIs (stored as PNG regions) and merges them into slide-level `.h5` files. Supports both built-in Trident encoders and custom FM models.
 
 ⚠️ NOTE: the `wsi_dir` is the parent folder of unitopatho, not the individual subfolders for HP, NORM, etc. 
+
+
 **Step 1 — Run once to get seg and coords (any model):**
 ```bash
 python run_unitopatho.py --task all \
