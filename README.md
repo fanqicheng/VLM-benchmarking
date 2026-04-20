@@ -63,7 +63,7 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
    - PubMedBERT: `ctranspath_448_pubmedbert/checkpoints/epoch_50.pt`
 4. Place it anywhere on your server and pass the path via `--ckpt_path`
 
-## Patches and Features Extraction Usage
+## Usage 1: Patches and Features Extraction 
 
 ### Step 1: Run the first model with `--task all` (generates seg + coords + feat)
 ```bash
@@ -101,7 +101,60 @@ done
 ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
 
 
-## Aggregate Features per dataset ALL models
+## Usage 2: UnitoPatho Feature Extraction
+
+Extracts patch-level features from UnitoPatho WSIs (stored as PNG regions) and merges them into slide-level `.h5` files. Supports both built-in Trident encoders and custom FM models.
+
+## Usage
+
+**Step 1 — Run once to get seg and coords (any model):**
+```bash
+python run_unitopatho.py --task all \
+    --patch_encoder conch_v1 \
+    --wsi_dir /path/to/unitopatho/ \
+    --job_dir /path/to/output/ \
+    --mag 20 --patch_size 256 --gpu 0
+```
+
+**Step 2 — Run feat only for remaining models:**
+```bash
+# Built-in Trident models
+python run_unitopatho.py --task feat \
+    --patch_encoder musk \
+    --wsi_dir /path/to/unitopatho/ \
+    --job_dir /path/to/output/ \
+    --mag 20 --patch_size 256 --gpu 0
+
+# Custom FM models
+python run_unitopatho.py --task feat \
+    --model plip \
+    --wsi_dir /path/to/unitopatho/ \
+    --job_dir /path/to/output/ \
+    --mag 20 --patch_size 256 --gpu 0
+```
+
+## Output structure
+```
+output/
+    HP/
+        wsi_001/
+            20.0x_256px_0px_overlap/
+                features_conch_v1_merged/
+                    wsi_001.h5
+                features_musk_merged/
+                    wsi_001.h5
+                features_plip_merged/
+                    wsi_001.h5
+                features_keep_merged/
+                    wsi_001.h5
+            contours/
+            thumbnails/
+    NORM/
+        wsi_001/
+            ...
+```
+
+## Usage 3: Aggregate Features per dataset ALL models
 
 Aggregates patch-level .h5 embeddings into slide-level embeddings using top-k norm pooling.
 
@@ -130,4 +183,5 @@ bash run_aggregate.sh --dataset CAM16 --top_k 0.05
     {DATASET}_topk.npy       # [N_slides, D] slide embeddings
     {DATASET}_topk_ids.npy   # [N_slides] slide IDs
 ```
+
 
