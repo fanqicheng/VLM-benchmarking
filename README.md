@@ -105,7 +105,6 @@ done
 
 Extracts patch-level features from UnitoPatho WSIs (stored as PNG regions) and merges them into slide-level `.h5` files. Supports both built-in Trident encoders and custom FM models.
 
-## Usage
 
 **Step 1 — Run once to get seg and coords (any model):**
 ```bash
@@ -133,7 +132,7 @@ python run_unitopatho.py --task feat \
     --mag 20 --patch_size 256 --gpu 0
 ```
 
-## Output structure
+### Output structure
 ```
 output/
     HP/
@@ -158,9 +157,11 @@ output/
 
 Aggregates patch-level .h5 embeddings into slide-level embeddings using top-k norm pooling.
 
+The provided  `.sh` file will finish all the models for each dataset, and store the results correspondingly. 
+
 per dataset per model feature aggregate script: `dataset_embedding_h5.py`
 
-## Setup
+### Setup
 
 Edit the three paths in `run_aggregate.sh`:
 
@@ -170,13 +171,13 @@ H5_ROOT="path/to/patch_features"       # expects {H5_ROOT}/{DATASET}/{MODEL}/*.h
 OUT_ROOT="path/to/aggregate_feature"   # outputs {OUT_ROOT}/{DATASET}/{MODEL}/
 ```
 
-## Usage
+### Usage
 
 ```bash
 bash run_aggregate.sh --dataset CAM16 --top_k 0.05
 ```
 
-## Output
+### Output
 
 ```
 {OUT_ROOT}/{DATASET}/{MODEL}/
