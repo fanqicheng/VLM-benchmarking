@@ -63,7 +63,7 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
    - PubMedBERT: `ctranspath_448_pubmedbert/checkpoints/epoch_50.pt`
 4. Place it anywhere on your server and pass the path via `--ckpt_path`
 
-## Usage
+## Patches and Features Extraction Usage
 
 ### Step 1: Run the first model with `--task all` (generates seg + coords + feat)
 ```bash
@@ -98,5 +98,34 @@ for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet mi-z
         --mag 20 --patch_size 256 --gpu 0
 done
 ```
+⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
 
-> ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
+
+## Aggregate Features per dataset ALL models
+
+Aggregates patch-level .h5 embeddings into slide-level embeddings using top-k norm pooling.
+
+## Setup
+
+Edit the three paths in `run_aggregate.sh`:
+
+```bash
+SCRIPT="path/to/dataset_embeddings_h5.py"
+H5_ROOT="path/to/patch_features"       # expects {H5_ROOT}/{DATASET}/{MODEL}/*.h5
+OUT_ROOT="path/to/aggregate_feature"   # outputs {OUT_ROOT}/{DATASET}/{MODEL}/
+```
+
+## Usage
+
+```bash
+bash run_aggregate.sh --dataset CAM16 --top_k 0.05
+```
+
+## Output
+
+```
+{OUT_ROOT}/{DATASET}/{MODEL}/
+    {DATASET}_topk.npy       # [N_slides, D] slide embeddings
+    {DATASET}_topk_ids.npy   # [N_slides] slide IDs
+```
+
