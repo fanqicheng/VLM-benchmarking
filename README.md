@@ -105,12 +105,14 @@ done
 
 Aggregates patch-level .h5 embeddings into slide-level embeddings using top-k norm pooling.
 
+per dataset per model feature aggregate script: `dataset_embedding_h5.py`
+
 ## Setup
 
 Edit the three paths in `run_aggregate.sh`:
 
 ```bash
-SCRIPT="path/to/dataset_embeddings_h5.py"
+SCRIPT="path/to/dataset_embedding_h5.py"
 H5_ROOT="path/to/patch_features"       # expects {H5_ROOT}/{DATASET}/{MODEL}/*.h5
 OUT_ROOT="path/to/aggregate_feature"   # outputs {OUT_ROOT}/{DATASET}/{MODEL}/
 ```
