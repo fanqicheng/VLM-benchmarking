@@ -13,7 +13,7 @@ This repository extends [Trident](https://github.com/mahmoodlab/TRIDENT) to supp
 | `pathgen-clip` | `run_with_custom_fm.py` | 256 | Requires HF login + access |
 | `biomedclip-v2` | `run_with_custom_fm.py` | 256 | Public |
 | `patho-clip` | `run_with_custom_fm.py` | 256 | Requires HF login + access |
-| `mi-zero` | `run_with_custom_fm.py` | 448 | Requires manual checkpoint download |
+| `mi-zero` | `run_with_custom_fm.py` | 256 (should mention in the paper) | Requires manual checkpoint download |
 | `quiltnet` | `run_with_custom_fm.py` | 256 | Public |
 
 ## Installation
@@ -88,7 +88,7 @@ python run_batch_of_slides.py --task feat \
     --mag 20 --patch_size 256 --gpu 0
 
 # custom encoders
-for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet; do
+for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet mi-zero; do
     python run_with_custom_fm.py --task all \
         --model $model \
         --wsi_dir /path/to/wsis \
@@ -97,18 +97,6 @@ for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet; do
         --coords_dir /path/to/output/conch/20.0x_256px_0px_overlap \
         --mag 20 --patch_size 256 --gpu 0
 done
-```
-
-### Step 3: mi-zero (requires separate job_dir due to different patch_size)
-
-mi-zero uses `patch_size=448` and must generate its own seg and coords 
-```bash
-python run_with_custom_fm.py --task all \
-    --model mi-zero \
-    --wsi_dir /path/to/wsis \
-    --job_dir /path/to/output/mi-zero \
-    --mag 20 --patch_size 448 --gpu 0 \
-    --ckpt_path /path/to/epoch_50.pt
 ```
 
 > ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
