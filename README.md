@@ -63,7 +63,7 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
    - PubMedBERT: `ctranspath_448_pubmedbert/checkpoints/epoch_50.pt`
 4. Place it anywhere on your server and pass the path via `--ckpt_path`
 
-## Usage 1: Patches and Features Extraction 
+## Usage 1: Patches and Features Extraction (for PANDA, TCGA, Camleyon16/17)
 
 ### Step 1: Run the first model with `--task all` (generates seg + coords + feat)
 ```bash
@@ -101,7 +101,7 @@ done
 ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
 
 
-## Usage 2: UnitoPatho Feature Extraction
+## Usage 2: UnitoPatho Feature Extraction 
 
 Extracts patch-level features from UnitoPatho WSIs (stored as PNG regions) and merges them into slide-level `.h5` files. Supports both built-in Trident encoders and custom FM models.
 
