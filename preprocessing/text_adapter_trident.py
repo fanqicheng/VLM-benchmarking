@@ -1,27 +1,3 @@
-#!/usr/bin/env python3
-"""
-text_adapter.py
-
-A dedicated text adapter layer for pathology VLMs.
-Goal:
-    - unify fm.encode_text(texts) across heterogeneous model families
-    - avoid forcing all models into one tokenizer/one API
-
-Supported:
-    - conch
-    - plip
-    - keep
-    - biomedclip-v2
-    - pathgen-clip
-    - patho-clip
-    - histoclip   (best-effort, not official zero-shot API)
-
-Notes:
-    - Some models are true OpenCLIP-style
-    - Some require HF tokenizers
-    - Some are custom / partial support only
-"""
-
 from __future__ import annotations
 
 from typing import Callable, List, Optional
@@ -68,11 +44,6 @@ def _extract_text_features_from_output(outputs) -> torch.Tensor:
         return feat
 
     raise RuntimeError(f"Cannot extract text features from output type: {type(outputs)}")
-
-
-# ---------------------------------------------------------------------
-# Generic builders
-# ---------------------------------------------------------------------
 
 def build_openclip_text_adapter(
     model,
@@ -231,10 +202,6 @@ def build_biogpt_text_adapter(
     return encode_text
 
 
-# ---------------------------------------------------------------------
-# Registry-facing entry point
-# ---------------------------------------------------------------------
-
 def attach_text_adapter(
     fm,
     *,
@@ -243,14 +210,7 @@ def attach_text_adapter(
     device: Optional[str] = None,
     batch_size: int = 32,
 ) -> None:
-    """
-    Mutates fm in-place:
-        - fm.encode_text = callable
-        - fm.has_text_encoder = True
-
-    Expected:
-        fm.name identifies the model family.
-    """
+ 
     if device is None:
         # best effort device inference
         try:
@@ -263,11 +223,6 @@ def attach_text_adapter(
 
     name = fm.name.lower()
 
-    # -------------------------------------------------------------
-    # CONCH
-    # Official usage relies on conch.open_clip_custom and encode_text.
-    # The model supports text encoding according to official README. 
-    # -------------------------------------------------------------
     if name == "conch":
         if tokenizer is None:
             try:
@@ -285,10 +240,6 @@ def attach_text_adapter(
         fm.has_text_encoder = True
         return
 
-    # -------------------------------------------------------------
-    # PLIP / PathGen-CLIP / Patho-CLIP
-    # These are OpenCLIP-style usage patterns in official examples / model pages.
-    # -------------------------------------------------------------
     if name in {"plip", "pathgen-clip", "patho-clip"}:
         if tokenizer is None:
             raise RuntimeError(f"{fm.name}: tokenizer must be provided from loader.")
@@ -298,10 +249,6 @@ def attach_text_adapter(
         fm.has_text_encoder = True
         return
 
-    # -------------------------------------------------------------
-    # KEEP
-    # KEEP uses HF tokenizer + model.encode_text(dict_inputs) in your current loader.
-    # -------------------------------------------------------------
     if name == "keep":
         if tokenizer is None:
             raise RuntimeError("KEEP: tokenizer must be provided from loader.")
@@ -311,10 +258,6 @@ def attach_text_adapter(
         fm.has_text_encoder = True
         return
 
-    # -------------------------------------------------------------
-    # BioMedCLIP v2
-    # Use HF tokenizer + get_text_features / forward, not generic open_clip tokenizer.
-    # -------------------------------------------------------------
     if name == "biomedclip-v2":
         if tokenizer is None:
             raise RuntimeError("biomedclip-v2: tokenizer must be provided from loader.")
@@ -327,12 +270,6 @@ def attach_text_adapter(
         fm.has_text_encoder = True
         return
 
-    # -------------------------------------------------------------
-    # HistoCLIP / HistoGPT
-    # Public repo emphasizes BioGPT language module and generated reports;
-    # public zero-shot text encoder tooling is incomplete.
-    # This is a best-effort adapter, not guaranteed official retrieval behavior.
-    # -------------------------------------------------------------
     if name == "histoclip":
         if hf_text_model is None or tokenizer is None:
             raise RuntimeError(
