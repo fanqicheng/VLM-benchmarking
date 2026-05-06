@@ -23,7 +23,7 @@ VLM-benchmarking/
 
 | Model | Script | patch_size | Notes |
 |-------|--------|-----------|-------|
-| conch_v1 | `run_batch_of_slides.py` | 256 | Requires HF login + access |
+| conch | `run_batch_of_slides.py` | 256 | Requires HF login + access |
 | musk | `run_batch_of_slides.py` | 256 | Requires HF login + access |
 | plip | `run_with_custom_fm.py` | 256 | Public |
 | keep | `run_with_custom_fm.py` | 256 | Public |
@@ -90,7 +90,7 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
 **Run the first model with `--task all` (generates seg + coords + features):**
 ```bash
 python preprocessing/run_batch_of_slides.py --task all \
-    --patch_encoder conch_v1 \
+    --patch_encoder conch \
     --wsi_dir /path/to/wsis \
     --job_dir /path/to/output/conch \
     --mag 20 --patch_size 256 --gpu 0
