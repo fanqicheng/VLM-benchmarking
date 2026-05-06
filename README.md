@@ -1,27 +1,46 @@
-# TRIDENT VLM Feature Extraction Pipeline
+# PathLang: A Language-Centered Benchmark for Vision-Language Models in Computational Pathology
 
-This repository extends [Trident](https://github.com/mahmoodlab/TRIDENT) to support additional pathology vision-language foundation models (VLMs) for whole-slide image (WSI) feature extraction.
+PathLang is a comprehensive benchmark for evaluating vision-language models (VLMs) on pathology whole-slide images (WSIs) across multiple language-centered tasks, including zero-shot classification, cross-modal retrieval, open vocabulary retrieval, and paraphrase robustness.
+
+---
+
+## Repository Structure
+
+```
+VLM-benchmarking/
+  ├── preprocessing/       # WSI feature extraction pipeline
+  ├── prompt_encode/       # Text prompt embedding generation
+  └── evaluation/          # Retrieval and alignment evaluation
+      ├── cross_modality/
+      ├── open_vocab/
+      ├── paraphrase_robustness/
+      └── zero_shot/
+```
+
+---
 
 ## Supported Models
 
 | Model | Script | patch_size | Notes |
-|---|---|---|---|
-| `conch_v1` | `run_batch_of_slides.py` | 256 | Requires HF login + access |
-| `musk` | `run_batch_of_slides.py` | 256 | Requires HF login + access |
-| `plip` | `run_with_custom_fm.py` | 256 | Public |
-| `keep` | `run_with_custom_fm.py` | 256 | Public |
-| `pathgen-clip` | `run_with_custom_fm.py` | 256 | Requires HF login + access |
-| `biomedclip-v2` | `run_with_custom_fm.py` | 256 | Public |
-| `patho-clip` | `run_with_custom_fm.py` | 256 | Requires HF login + access |
-| `mi-zero` | `run_with_custom_fm.py` | 256 (should mention in the paper) | Requires manual checkpoint download |
-| `quiltnet` | `run_with_custom_fm.py` | 256 | Public |
+|-------|--------|-----------|-------|
+| conch_v1 | `run_batch_of_slides.py` | 256 | Requires HF login + access |
+| musk | `run_batch_of_slides.py` | 256 | Requires HF login + access |
+| plip | `run_with_custom_fm.py` | 256 | Public |
+| keep | `run_with_custom_fm.py` | 256 | Public |
+| pathgen-clip | `run_with_custom_fm.py` | 256 | Requires HF login + access |
+| biomedclip-v2 | `run_with_custom_fm.py` | 256 | Public |
+| patho-clip | `run_with_custom_fm.py` | 256 | Requires HF login + access |
+| mi-zero | `run_with_custom_fm.py` | 256 | Requires manual checkpoint download |
+| quiltnet | `run_with_custom_fm.py` | 256 | Public |
+
+---
 
 ## Installation
 
 **1. Clone this repo**
 ```bash
-git clone https://github.com/your_username/your_repo.git
-cd your_repo
+git clone https://github.com/[anonymous]/[anonymous].git
+cd VLM-benchmarking
 ```
 
 **2. Install Trident**
@@ -39,9 +58,9 @@ pip install timm==0.9.16
 pip install numpy==1.24.0
 ```
 
-## HuggingFace Setup
+**4. HuggingFace Setup**
 
-Some models require HuggingFace login and access approval. Run the following before using gated models:
+Some models require HuggingFace login and access approval:
 ```bash
 huggingface-cli login
 ```
@@ -52,34 +71,35 @@ Then request access to the following models on HuggingFace:
 - [jamessyx/PathGen-CLIP](https://huggingface.co/jamessyx/PathGen-CLIP)
 - [WenchuanZhang/Patho-CLIP-L](https://huggingface.co/WenchuanZhang/Patho-CLIP-L)
 
-## MI-Zero Checkpoint
+**5. MI-Zero Checkpoint**
 
 MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
+- Visit https://github.com/mahmoodlab/MI-Zero
+- Find the Google Drive link in the README
+- Download one of the following checkpoints:
+  - BioClinicalBERT: `ctranspath_448_bioclinicalbert/checkpoints/epoch_50.pt`
+  - PubMedBERT: `ctranspath_448_pubmedbert/checkpoints/epoch_50.pt`
+- Place it anywhere and pass the path via `--ckpt_path`
 
-1. Visit https://github.com/mahmoodlab/MI-Zero
-2. Find the Google Drive link in the README
-3. Download one of the following checkpoints:
-   - BioClinicalBERT: `ctranspath_448_bioclinicalbert/checkpoints/epoch_50.pt`
-   - PubMedBERT: `ctranspath_448_pubmedbert/checkpoints/epoch_50.pt`
-4. Place it anywhere on your server and pass the path via `--ckpt_path`
+---
 
-## Usage 1: Patches and Features Extraction (for PANDA, TCGA, Camleyon16/17)
+## Step 1: Preprocessing — WSI Feature Extraction
 
-### Step 1: Run the first model with `--task all` (generates seg + coords + feat)
+### PANDA, TCGA, CAMELYON16/17
+
+**Run the first model with `--task all` (generates seg + coords + features):**
 ```bash
-python run_batch_of_slides.py --task all \
+python preprocessing/run_batch_of_slides.py --task all \
     --patch_encoder conch_v1 \
     --wsi_dir /path/to/wsis \
     --job_dir /path/to/output/conch \
     --mag 20 --patch_size 256 --gpu 0
 ```
 
-### Step 2: Run remaining models reusing seg and coords (task set to feat)
-
-Use `--seg_dir` to reuse existing segmentation results and `--coords_dir` to reuse existing patch coordinates. This avoids redundant computation and saves storage space.
+**Run remaining models reusing seg and coords:**
 ```bash
 # musk
-python run_batch_of_slides.py --task feat \
+python preprocessing/run_batch_of_slides.py --task feat \
     --patch_encoder musk \
     --wsi_dir /path/to/wsis \
     --job_dir /path/to/output/musk \
@@ -88,8 +108,8 @@ python run_batch_of_slides.py --task feat \
     --mag 20 --patch_size 256 --gpu 0
 
 # custom encoders
-for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet mi-zero; do
-    python run_with_custom_fm.py --task all \
+for model in plip keep pathgen-clip biomedclip-v2 patho-clip quiltnet mi-zero; do
+    python preprocessing/run_with_custom_fm.py --task feat \
         --model $model \
         --wsi_dir /path/to/wsis \
         --job_dir /path/to/output/$model \
@@ -98,93 +118,144 @@ for model in plip keep pathgen-clip biomedclip-v2 patho-clip mstar quiltnet mi-z
         --mag 20 --patch_size 256 --gpu 0
 done
 ```
-⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly, otherwise coordinates will not align correctly.
 
+> ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly.
 
-## Usage 2: UnitoPatho Feature Extraction 
+### UnitoPatho
 
-Extracts patch-level features from UnitoPatho WSIs (stored as PNG regions) and merges them into slide-level `.h5` files. Supports both built-in Trident encoders and custom FM models.
-
-⚠️ NOTE: the `wsi_dir` is the parent folder of unitopatho, not the individual subfolders for HP, NORM, etc. 
-
-
-**Step 1 — Run once to get seg and coords (any model):**
 ```bash
-python run_unitopatho.py --task all \
+# Step 1 — seg + coords + features (run once)
+python preprocessing/run_unitopatho.py --task all \
     --patch_encoder conch_v1 \
     --wsi_dir /path/to/unitopatho/ \
     --job_dir /path/to/output/ \
     --mag 20 --patch_size 256 --gpu 0
-```
 
-**Step 2 — Run feat only for remaining models:**
-```bash
-# Built-in Trident models
-python run_unitopatho.py --task feat \
-    --patch_encoder musk \
-    --wsi_dir /path/to/unitopatho/ \
-    --job_dir /path/to/output/ \
-    --mag 20 --patch_size 256 --gpu 0
-
-# Custom FM models
-python run_unitopatho.py --task feat \
+# Step 2 — features only for remaining models
+python preprocessing/run_unitopatho.py --task feat \
     --model plip \
     --wsi_dir /path/to/unitopatho/ \
     --job_dir /path/to/output/ \
     --mag 20 --patch_size 256 --gpu 0
 ```
 
-### Output structure
-```
-output/
-    HP/
-        wsi_001/
-            20.0x_256px_0px_overlap/
-                features_conch_v1_merged/
-                    wsi_001.h5
-                features_musk_merged/
-                    wsi_001.h5
-                features_plip_merged/
-                    wsi_001.h5
-                features_keep_merged/
-                    wsi_001.h5
-            contours/
-            thumbnails/
-    NORM/
-        wsi_001/
-            ...
-```
-
-## Usage 3: Aggregate Features per dataset ALL models
-
-Aggregates patch-level .h5 embeddings into slide-level embeddings using top-k norm pooling.
-
-The provided  `.sh` file will finish all the models for each dataset, and store the results correspondingly. 
-
-per dataset per model feature aggregate script: `dataset_embedding_h5.py`
-
-### Setup
-
-Edit the three paths in `run_aggregate.sh`:
+### Aggregate Features
 
 ```bash
-SCRIPT="path/to/dataset_embedding_h5.py"
-H5_ROOT="path/to/patch_features"       # expects {H5_ROOT}/{DATASET}/{MODEL}/*.h5
-OUT_ROOT="path/to/aggregate_feature"   # outputs {OUT_ROOT}/{DATASET}/{MODEL}/
+bash preprocessing/run_aggregate.sh --dataset CAM16 --top_k 0.05
 ```
 
-### Usage
+---
+
+## Step 2: Prompt Encoding — Text Embedding Generation
+
+Generates text embeddings from expert-written clinical prompts for each evaluation task.
 
 ```bash
-bash run_aggregate.sh --dataset CAM16 --top_k 0.05
+# Zero-shot classification prompts
+python prompt_encode/generate_text_embedding_ZEROSHOT.py \
+    --model plip --dataset CAMELYON16 \
+    --output_dir /path/to/text_embeddings
+
+# Cross-modal retrieval prompts
+python prompt_encode/generate_text_embedding_CROSS_MODAL.py \
+    --model plip --dataset CAMELYON16 \
+    --output_dir /path/to/text_embeddings
+
+# Open vocabulary prompts
+python prompt_encode/generate_text_embedding_OPENVOCAB.py \
+    --model plip --dataset CAMELYON16 \
+    --output_dir /path/to/text_embeddings
+
+# Paraphrase robustness prompts
+python prompt_encode/generate_text_embedding_PARAPHRASE.py \
+    --model plip --dataset CAMELYON16 \
+    --output_dir /path/to/text_embeddings
 ```
 
-### Output
+---
 
-```
-{OUT_ROOT}/{DATASET}/{MODEL}/
-    {DATASET}_topk.npy       # [N_slides, D] slide embeddings
-    {DATASET}_topk_ids.npy   # [N_slides] slide IDs
+## Step 3: Evaluation
+
+### Zero-Shot Classification
+
+```bash
+python evaluation/zero_shot/zero_shot_CAMELYON16.py \
+    --image_emb /path/to/embeddings.npy \
+    --slide_ids /path/to/slide_ids.npy \
+    --text_emb  /path/to/text_embeddings/CAMELYON16.npy \
+    --csv_path  /path/to/CAM16.csv \
+    --output_dir ./results/zero_shot
 ```
 
+Scripts available for: `CAMELYON16`, `CAMELYON17`, `PANDA`, `TCGA-GBMLGG`, `UNITOPATHO`
+
+### Cross-Modal Retrieval
+
+```bash
+# Image-to-image
+python evaluation/cross_modality/image_to_image.py \
+    --dataset CAMELYON16 \
+    --image_emb /path/to/embeddings.npy \
+    --slide_ids /path/to/slide_ids.npy \
+    --csv_path  /path/to/CAM16.csv \
+    --out_json  ./results/image_to_image.json
+
+# Image-to-text
+python evaluation/cross_modality/image_to_text.py \
+    --dataset CAMELYON16 \
+    --image_emb /path/to/embeddings.npy \
+    --slide_ids /path/to/slide_ids.npy \
+    --text_root /path/to/text_embeddings \
+    --csv_path  /path/to/CAM16.csv \
+    --out_json  ./results/image_to_text.json
+
+# Text-to-image
+python evaluation/cross_modality/text_to_image.py \
+    --dataset CAMELYON16 \
+    --image_emb /path/to/embeddings.npy \
+    --slide_ids /path/to/slide_ids.npy \
+    --text_root /path/to/text_embeddings \
+    --csv_path  /path/to/CAM16.csv \
+    --save_csv  ./results/text_to_image.csv
+```
+
+### Open Vocabulary Retrieval
+
+```bash
+python evaluation/open_vocab/evaluate_openvocab.py \
+    --image_emb  /path/to/embeddings.npy \
+    --slide_ids  /path/to/slide_ids.npy \
+    --emb_root   /path/to/text_embeddings \
+    --csv_path   /path/to/CAM16.csv \
+    --dataset    CAMELYON16 \
+    --model      plip \
+    --output_dir ./results/open_vocab
+```
+
+### Paraphrase Robustness
+
+```bash
+python evaluation/paraphrase_robustness/evaluate_paraphrase.py \
+    --image_emb  /path/to/embeddings.npy \
+    --slide_ids  /path/to/slide_ids.npy \
+    --pool_emb   /path/to/paraphrase_pool.npy \
+    --csv_path   /path/to/CAM16.csv \
+    --dataset    CAMELYON16 \
+    --model      plip \
+    --output_dir ./results/paraphrase_robustness
+```
+
+### Alignment Score
+
+```bash
+python evaluation/zero_shot/alignment.py \
+    --image_emb  /path/to/embeddings.npy \
+    --slide_ids  /path/to/slide_ids.npy \
+    --text_emb   /path/to/text_embeddings/CAMELYON16.npy \
+    --csv_path   /path/to/CAM16.csv \
+    --dataset    CAMELYON16 \
+    --model      plip \
+    --output_dir ./results/alignment
+```
 
