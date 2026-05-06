@@ -1,17 +1,4 @@
 
-Copy
-
-#!/bin/bash
-# run_aggregate.sh
-# Runs aggregation for all models on a single dataset
-#
-# Usage:
- 
- 
- 
-# ---------------------------------------------------------------------------
-# Parse arguments
-# ---------------------------------------------------------------------------
 DATASET=""
 TOP_K=""
  
@@ -41,9 +28,9 @@ MODELS=(
     "conch"
     "plip"
     "keep"
-    "biomedclip"
+    "biomedclip-v2"
     "pathgen-clip"
-    "pathoclip"
+    "patho-clip"
     "musk"
     "mi-zero"
     "quiltnet"
