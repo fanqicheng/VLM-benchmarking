@@ -5,7 +5,7 @@ PathLang is a comprehensive benchmark for evaluating vision-language models (VLM
 ---
 
 ## Repository Structure
-
+```
 VLM-benchmarking/
   ├── preprocessing/        # WSI feature extraction pipeline
   ├── prompt_encode/        # Text prompt embedding generation
@@ -15,6 +15,7 @@ VLM-benchmarking/
       ├── open_vocab/
       ├── paraphrase_robustness/
       └── zero_shot/
+```
 ---
 
 ## Supported Models
