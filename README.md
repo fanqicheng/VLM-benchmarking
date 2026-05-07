@@ -23,15 +23,15 @@ VLM-benchmarking/
 
 | Model | Script | patch_size | Notes |
 |-------|--------|-----------|-------|
-| conch | `run_batch_of_slides.py` | 256 | Requires HF login + access |
-| musk | `run_batch_of_slides.py` | 256 | Requires HF login + access |
-| plip | `run_with_custom_fm.py` | 256 | Public |
-| keep | `run_with_custom_fm.py` | 256 | Public |
-| pathgen-clip | `run_with_custom_fm.py` | 256 | Requires HF login + access |
-| biomedclip-v2 | `run_with_custom_fm.py` | 256 | Public |
-| patho-clip | `run_with_custom_fm.py` | 256 | Requires HF login + access |
-| mi-zero | `run_with_custom_fm.py` | 256 | Requires manual checkpoint download |
-| quiltnet | `run_with_custom_fm.py` | 256 | Public |
+| conch | `run_batch_of_slides.py` | 256 (1024 for UnitoPatho) | Requires HF login + access |
+| musk | `run_batch_of_slides.py` | 256 (1024 for UnitoPatho) | Requires HF login + access |
+| plip | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Public |
+| keep | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Public |
+| pathgen-clip | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Requires HF login + access |
+| biomedclip-v2 | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Public |
+| patho-clip | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Requires HF login + access |
+| mi-zero | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Requires manual checkpoint download |
+| quiltnet | `run_with_custom_fm.py` | 256 (1024 for UnitoPatho) | Public |
 
 ---
 
@@ -119,24 +119,24 @@ for model in plip keep pathgen-clip biomedclip-v2 patho-clip quiltnet mi-zero; d
 done
 ```
 
-> ⚠️ When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly.
+> When using `--seg_dir` and `--coords_dir`, `--mag` and `--patch_size` must match the first model exactly.
 
 ### UnitoPatho
 
 ```bash
 # Step 1 — seg + coords + features (run once)
 python preprocessing/run_unitopatho.py --task all \
-    --patch_encoder conch_v1 \
+    --patch_encoder conch \
     --wsi_dir /path/to/unitopatho/ \
     --job_dir /path/to/output/ \
-    --mag 20 --patch_size 256 --gpu 0
+    --mag 20 --patch_size 1024 --gpu 0
 
 # Step 2 — features only for remaining models
 python preprocessing/run_unitopatho.py --task feat \
     --model plip \
     --wsi_dir /path/to/unitopatho/ \
     --job_dir /path/to/output/ \
-    --mag 20 --patch_size 256 --gpu 0
+    --mag 20 --patch_size 1024 --gpu 0
 ```
 
 ### Aggregate Features
