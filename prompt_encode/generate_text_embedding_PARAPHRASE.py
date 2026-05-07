@@ -75,8 +75,7 @@ def main():
                         help="Model name: plip, conch, keep, biomedclip-v2, ...")
     parser.add_argument("--prompt_dir",    required=True,
                         help="Directory containing variant1.json and variant2.json")
-    parser.add_argument("-o", "--output",  default="/Data3/shangke/paraphrase_text_emb",
-                        help="Output root directory")
+    parser.add_argument("-o", "--output", help="Output root directory")
     parser.add_argument("--datasets",      nargs="+", default=None,
                         help="Subset of datasets (default: all in JSON)")
     parser.add_argument("--device",        default="cuda:0" if torch.cuda.is_available() else "cpu")
