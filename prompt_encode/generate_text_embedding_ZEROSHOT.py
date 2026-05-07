@@ -88,8 +88,7 @@ def main():
     parser.add_argument(
         "-p", "--prompts",
         type=str,
-        default="/Data3/shangke/model/config/prompts.json",
-        help="Path to prompts.json file (default: /Data3/shangke/model/config/prompts.json)"
+        help="Path to prompts.json file"
     )
     parser.add_argument(
         "-o", "--output",
