@@ -6,17 +6,15 @@ PathLang is a comprehensive benchmark for evaluating vision-language models (VLM
 
 ## Repository Structure
 
-```
 VLM-benchmarking/
-  ├── preprocessing/       # WSI feature extraction pipeline
-  ├── prompt_encode/       # Text prompt embedding generation
-  └── evaluation/          # Retrieval and alignment evaluation
+  ├── preprocessing/        # WSI feature extraction pipeline
+  ├── prompt_encode/        # Text prompt embedding generation
+  ├── prompt_embeddings/    # Pre-computed prompt embeddings (per model, per dataset)
+  └── evaluation/           # Retrieval and alignment evaluation
       ├── cross_modality/
       ├── open_vocab/
       ├── paraphrase_robustness/
       └── zero_shot/
-```
-
 ---
 
 ## Supported Models
@@ -83,7 +81,7 @@ MI-Zero does not have a HuggingFace page. Download the checkpoint manually:
 
 ---
 
-## Step 1: Preprocessing — WSI Feature Extraction
+## Part 1: Preprocessing — WSI Feature Extraction
 
 ### PANDA, TCGA, CAMELYON16/17
 
@@ -147,7 +145,7 @@ bash preprocessing/run_aggregate.sh --dataset CAM16 --top_k 0.05
 
 ---
 
-## Step 2: Prompt Encoding — Text Embedding Generation
+## Part 2: Prompt Encoding — Text Embedding Generation
 
 Generates text embeddings from expert-written clinical prompts for each evaluation task.
 
@@ -175,7 +173,20 @@ python prompt_encode/generate_text_embedding_PARAPHRASE.py \
 
 ---
 
-## Step 3: Evaluation
+## Part 3: Prompt Embeddings
+
+Pre-computed prompt embeddings are provided in the `prompt_embeddings/` folder as zip files, covering all 9 models and 5 datasets (CAMELYON16, CAMELYON17, PANDA, TCGA-GBMLGG, UNITOPATHO) across four evaluation tasks:
+
+- `cross_modal.zip`
+- `zero_shot.zip`
+- `open_vocab.zip`
+- `paraphrase.zip`
+
+Download and unzip the relevant file before running evaluation.
+
+---
+
+## Part 4: Evaluation
 
 ### Zero-Shot Classification
 
@@ -258,4 +269,3 @@ python evaluation/zero_shot/alignment.py \
     --model      plip \
     --output_dir ./results/alignment
 ```
-
