@@ -1,0 +1,132 @@
+{
+  "PANDA": {
+    "0": {
+      "short": "ISUP Grade 0 (Benign)",
+      "medium": "Benign prostatic tissue with preserved glandular architecture and bland cytology.",
+      "long": "Prostate core shows orderly non-neoplastic glands with smooth lumina, uniform epithelium, and no infiltrative or atypical features.",
+      "clinical": "Benign prostate tissue with normal gland architecture, uniform small glands, smooth luminal contours, and no nuclear atypia. Stroma is non-reactive and orderly. No evidence of carcinoma."
+    },
+    "1": {
+      "short": "ISUP Grade 1",
+      "medium": "Well-differentiated prostatic adenocarcinoma with separate, well-formed infiltrative glands.",
+      "long": "The biopsy contains discrete malignant acini with preserved glandular structure, mild atypia, and no fused or cribriform architecture.",
+      "clinical": "Low-grade prostate cancer with well-formed glands. Tumor glands are still round, separate, and organized. Minimal infiltration into surrounding tissue. Mild nuclear atypia with recognizable glandular structures. No fused or cribriform patterns."
+    },
+    "2": {
+      "short": "ISUP Grade 2",
+      "medium": "Predominantly well-formed prostatic carcinoma with focal poorly formed glands.",
+      "long": "This acinar malignancy is mainly composed of well-formed glands, with a lesser component showing early fusion and poor formation.",
+      "clinical": "Predominantly well-formed glands with a lesser component of poorly formed or fused small glands. Early architectural disorder, some poorly formed glands beginning to appear."
+    },
+    "3": {
+      "short": "ISUP Grade 3",
+      "medium": "Poorly formed gland-predominant prostatic adenocarcinoma with fused and cribriform glands and a minor pattern of well-formed glands.",
+      "long": "The tumor is dominated by poorly formed, fused, and cribriform glands, with only a smaller component of well-formed acini.",
+      "clinical": "Predominantly poorly formed, fused, or cribriform glands with a lesser component of well-formed glands. Architectural disorganization more prominent. Increased nuclear atypia."
+    },
+    "4": {
+      "short": "ISUP Grade 4",
+      "medium": "High-grade prostatic adenocarcinoma lacking residual well-formed glandular structures.",
+      "long": "The biopsy shows extensively fused, poorly formed, and cribriform malignant glands with marked architectural disorganization and no lower-grade glandular component.",
+      "clinical": "High-grade prostate cancer composed almost entirely of fused glands, poorly formed glands, or cribriform structures. Marked architectural disruption and significant nuclear atypia. No well-formed glands remain."
+    },
+    "5": {
+      "short": "ISUP Grade 5",
+      "medium": "Poorly differentiated prostatic carcinoma with complete loss of gland formation.",
+      "long": "High-grade prostate malignancy shows solid sheets, cords, single-cell infiltration, or comedonecrosis, with absent glandular differentiation throughout.",
+      "clinical": "Highest-grade prostate cancer with solid sheets of tumor cells, single-cell infiltration, cords, or comedonecrosis. Complete loss of glandular structure. Highly aggressive morphology with marked atypia."
+    }
+  },
+  "UNITOPATHO": {
+    "Normal": {
+      "short": "Normal",
+      "medium": "Benign colorectal mucosa without dysplasia, adenomatous change, or malignancy.",
+      "long": "The tissue shows non-neoplastic colorectal epithelium with preserved architecture and no cytologic atypia or invasive malignant features.",
+      "clinical": "benign colorectal tissue with no dysplasia or malignancy"
+    },
+    "Hyperplastic Polyp (HP)": {
+      "short": "Hyperplastic Polyp",
+      "medium": "Benign serrated colorectal polyp with goblet cell-rich crypt architecture.",
+      "long": "The lesion shows pale serrated crypts with stellate lumina, frilly surface contour, and no dysplastic epithelial atypia.",
+      "clinical": "Hyperplastic polyps are those in which the epithelial cells, although benign, begin to outgrow their available space. The glands have an increased number of goblet cells and therefore look pale or cleared out next to normal epithelium, and there tends to be a thickened or sclerotic-appearing basement membrane under the neoplastic cells. Because the surface area is outgrowing the lamina propria, hyperplastic polyps take on a distinctive frilly or lacy appearance. Crypts cut in cross section have a distinctive star-shaped lumen, also called serrated architecture."
+    },
+    "Tubular Adenoma, Low-Grade Dysplasia (TA.LG)": {
+      "short": "Tubular Adenoma, Low-Grade Dysplasia",
+      "medium": "Colorectal adenoma with predominantly tubular architecture and mild dysplasia.",
+      "long": "This neoplastic polyp shows mostly tubular glands with relatively orderly crypt architecture and low-grade cytologic dysplasia.",
+      "clinical": "tubular adenoma of the colon with low-grade dysplasia and predominantly tubular glands with relatively smooth, parallel crypt architecture"
+    },
+    "Tubular Adenoma, High-Grade Dysplasia (TA.HG)": {
+      "short": "Tubular Adenoma, High-Grade Dysplasia",
+      "medium": "Colorectal adenoma with tubular architecture and severe epithelial dysplasia.",
+      "long": "The lesion contains crowded back-to-back or cribriform glands accompanied by marked cytologic atypia consistent with advanced dysplasia.",
+      "clinical": "tubular adenoma of the colon with high-grade dysplasia, showing back-to-back or cribriform glands and marked cytologic dysplasia"
+    },
+    "Tubulovillous Adenoma, Low-Grade Dysplasia (TVA.LG)": {
+      "short": "Tubulovillous Adenoma, Low-Grade Dysplasia",
+      "medium": "Colorectal adenoma with mixed tubular-villous architecture and mild atypia.",
+      "long": "This adenomatous polyp shows combined villous and tubular growth patterns with low-grade epithelial dysplasia and limited cytologic abnormality.",
+      "clinical": "tubulovillous adenoma of the colon with mixed tubular and villous architecture and low-grade cytologic dysplasia"
+    },
+    "Tubulovillous Adenoma, High-Grade Dysplasia (TVA.HG)": {
+      "short": "Tubulovillous Adenoma, High-Grade Dysplasia",
+      "medium": "Mixed-architecture colorectal adenoma with high-grade epithelial dyspalasia.",
+      "long": "The lesion shows tubular and villous components with complex fused glands and marked epithelial atypia consistent with advanced dysplasia.",
+      "clinical": "tubulovillous adenoma with high-grade aepithelial dysplasia and complex fused glandular architecture"
+    }
+  },
+  "CAM16": {
+    "Normal": {
+      "short": "Normal",
+      "medium": "Benign lymph node without metastatic epithelial tumor deposits.",
+      "long": "The node retains intact lymphoid architecture and shows no metastatic breast carcinoma.",
+      "clinical": "A benign lymph node with intact architecture and no metastatic carcinoma."
+    },
+    "Metastasis": {
+      "short": "Metastasis",
+      "medium": "Sentinel lymph node involved by metastatic carcinoma deposits.",
+      "long": "The node contains malignant epithelial nests or clusters, disrupting and partially replacing normal nodal architecture.",
+      "clinical": "A lymph node containing metastatic carcinoma that forms disruptive nests or clusters effacing normal nodal architecture."
+    }
+  },
+  "CAM17": {
+    "Negative": {
+      "short": "Negative",
+      "medium": "Benign lymph node without metastatic carcinoma of any size.",
+      "long": "The node is free of isolated tumor cells, micrometastatic deposits, and larger metastatic foci, with preserved architecture.",
+      "clinical": "A benign lymph node with preserved architecture and no metastatic carcinoma, including no isolated tumor cells, micrometastases, or macrometastases."
+    },
+    "Isolated Tumor Cells (ITC)": {
+      "short": "Isolated Tumor Cells (ITC)",
+      "medium": "Lymph node containing only scattered single cells or tiny clusters.",
+      "long": "The nodal tissue harbors only minute epithelial deposits below 0.2 mm, without meaningful architectural distortion or effacement.",
+      "clinical": "A lymph node containing only isolated tumor cells—single cells or tiny clusters under 0.2 mm—without architectural distortion."
+    },
+    "Micrometastasis": {
+      "short": "Micrometastasis",
+      "medium": "Small nodal metastatic carcinoma deposit measuring 0.2 to 2 mm.",
+      "long": "The lymph node contains a limited metastatic epithelial focus of intermediate size, with only minor disturbance of architecture.",
+      "clinical": "A lymph node with micrometastatic breast carcinoma, showing small tumor deposits between 0.2–2 mm without major architectural effacement."
+    },
+    "Macrometastasis": {
+      "short": "Macrometastasis",
+      "medium": "Large nodal metastatic carcinoma deposit with architectural effacement.",
+      "long": "The node shows a metastatic epithelial tumor focus exceeding 2 mm, markedly distorting or replacing normal lymphoid tissue.",
+      "clinical": "A lymph node with macrometastatic breast carcinoma, featuring tumor deposits larger than 2 mm that markedly distort or replace normal nodal architecture."
+    }
+  },
+  "TCGA-GBMLGG": {
+    "Low-Grade Glioma (LGG)": {
+      "short": "Low-Grade Glioma (LGG)",
+      "medium": "Diffuse glioma lacking necrosis and microvascular proliferation.",
+      "long": "The infiltrating glial neoplasm does not exhibit the necrotic change or vascular proliferation characteristic of glioblastoma.",
+      "clinical": "glioma without features of glioblastoma"
+    },
+    "Glioblastoma (GBM)": {
+      "short": "Glioblastoma (GBM)",
+      "medium": "High-grade astrocytic tumor with necrosis and microvascular proliferation.",
+      "long": "This malignant glial neoplasm shows necrosis and/or prominent microvascular proliferation, supporting a diagnosis of glioblastoma.",
+      "clinical": "malignant astrocytoma demonstrating necrosis and/or microvascular proliferation characteristic of glioblastoma"
+    }
+  }
+}

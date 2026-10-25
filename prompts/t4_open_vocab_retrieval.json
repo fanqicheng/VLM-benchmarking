@@ -1,0 +1,1650 @@
+{
+  "set1_openvocab": {
+    "CAMELYON16": {
+      "NORMAL": {
+        "ground_truth": "normal tissue",
+        "candidates": [
+          "squmocolumnar mucosa with focal intestinal metaplasia ",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "squmocolumnar mucosa with focal intestinal metaplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "TUMOR": {
+        "ground_truth": "metastatic carcinoma",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      }
+    },
+    "CAMELYON17": {
+      "NEGATIVE": {
+        "ground_truth": "normal tissue",
+        "candidates": [
+          "non-neoplastic tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "ITC": {
+        "ground_truth": "low-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "MICRO": {
+        "ground_truth": "intermediate-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "MACRO": {
+        "ground_truth": "metastatic carcinoma",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      }
+    },
+    "PANDA": {
+      "0": {
+        "ground_truth": "benign tissue",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "tubular adenoma",
+          "sessile serrated adenoma"
+        ]
+      },
+      "1": {
+        "ground_truth": "low-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "2": {
+        "ground_truth": "intermediate-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "3": {
+        "ground_truth": "intermediate-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "4": {
+        "ground_truth": "high-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "5": {
+        "ground_truth": "poorly differentiated carcinoma",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      }
+    },
+    "TCGA-GBMLGG": {
+      "LGG": {
+        "ground_truth": "low-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "GBM": {
+        "ground_truth": "high-grade malignancy",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      }
+    },
+    "UNITOPATHO": {
+      "NORM": {
+        "ground_truth": "normal tissue",
+        "candidates": [
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "non-neoplastic tissue",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "HP": {
+        "ground_truth": "benign tissue",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "tabular adenoma",
+          "barrett esophagus with low grade dysplasia"
+        ]
+      },
+      "TA.LG": {
+        "ground_truth": "low-grade dysplasia",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "dysplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "TA.HG": {
+        "ground_truth": "high-grade dysplasia",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "squmocolumnar mucosa with focal intestinal metaplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "TVA.LG": {
+        "ground_truth": "low-grade dysplasia",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "squmocolumnar mucosa with focal intestinal metaplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      },
+      "TVA.HG": {
+        "ground_truth": "high-grade dysplasia",
+        "candidates": [
+          "benign tissue",
+          "low-grade malignancy",
+          "intermediate-grade malignancy",
+          "high-grade malignancy",
+          "poorly differentiated carcinoma",
+          "well-differentiated carcinoma",
+          "moderately differentiated carcinoma",
+          "adenocarcinoma",
+          "metastatic carcinoma",
+          "in situ carcinoma",
+          "squmocolumnar mucosa with focal intestinal metaplasia",
+          "low-grade dysplasia",
+          "high-grade dysplasia",
+          "invasive carcinoma",
+          "neuroendocrine carcinoma",
+          "squamous cell carcinoma",
+          "small cell carcinoma",
+          "undifferentiated carcinoma",
+          "reactive tissue",
+          "normal tissue"
+        ]
+      }
+    }
+  },
+  "set2_finegrained": {
+    "CAMELYON16": {
+      "NORMAL": {
+        "ground_truth": "normal lymph node",
+        "candidates": [
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node micrometastasis",
+          "lymph node isolated tumor cells",
+          "benign prostate tissue",
+          "normal colon tissue",
+          "normal liver",
+          "reactive lymph node",
+          "normal spleen",
+          "normal thymus"
+        ]
+      },
+      "TUMOR": {
+        "ground_truth": "lymph node metastasis",
+        "candidates": [
+          "lymph node metastasis",
+          "normal lymph node",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "lymph node isolated tumor cells",
+          "ISUP Grade 4 prostate cancer",
+          "invasive colorectal carcinoma",
+          "glioblastoma",
+          "invasive ductal carcinoma",
+          "poorly differentiated carcinoma"
+        ]
+      }
+    },
+    "CAMELYON17": {
+      "NEGATIVE": {
+        "ground_truth": "normal lymph node",
+        "candidates": [
+          "normal lymph node",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "reactive lymph node",
+          "normal spleen",
+          "normal thymus",
+          "benign prostate tissue",
+          "normal colon tissue",
+          "normal liver"
+        ]
+      },
+      "ITC": {
+        "ground_truth": "lymph node isolated tumor cells",
+        "candidates": [
+          "lymph node isolated tumor cells",
+          "normal lymph node",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "lymph node metastasis",
+          "reactive lymph node",
+          "ISUP Grade 1 prostate cancer",
+          "tubular adenoma low-grade",
+          "low-grade glioma",
+          "normal spleen"
+        ]
+      },
+      "MICRO": {
+        "ground_truth": "lymph node micrometastasis",
+        "candidates": [
+          "lymph node micrometastasis",
+          "lymph node isolated tumor cells",
+          "lymph node macrometastasis",
+          "normal lymph node",
+          "lymph node metastasis",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "tubular adenoma high-grade",
+          "reactive lymph node",
+          "low-grade glioma"
+        ]
+      },
+      "MACRO": {
+        "ground_truth": "lymph node macrometastasis",
+        "candidates": [
+          "lymph node macrometastasis",
+          "lymph node micrometastasis",
+          "lymph node with necrotizing lymphadenitis",
+          "lymph node isolated tumor cells",
+          "normal lymph node",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "glioblastoma",
+          "invasive colorectal carcinoma",
+          "poorly differentiated carcinoma"
+        ]
+      }
+    },
+    "PANDA": {
+      "0": {
+        "ground_truth": "benign prostate tissue",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "normal colon tissue",
+          "benign colorectal mucosa",
+          "normal lymph node",
+          "benign breast tissue",
+          "normal liver",
+          "normal lung tissue",
+          "benign thyroid tissue"
+        ]
+      },
+      "1": {
+        "ground_truth": "ISUP Grade 1 prostate cancer",
+        "candidates": [
+          "ISUP Grade 1 prostate cancer",
+          "benign prostate tissue",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "low-grade tubular adenoma",
+          "low-grade glioma",
+          "tubular adenoma low-grade",
+          "lymph node micrometastasis",
+          "low-grade dysplasia",
+          "high grade prostatic intraepithelial neoplasia (HGPIN)"
+        ]
+      },
+      "2": {
+        "ground_truth": "ISUP Grade 2 prostate cancer",
+        "candidates": [
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "tubular adenoma high-grade",
+          "tubular adenoma low-grade",
+          "moderately differentiated carcinoma",
+          "intermediate grade dysplasia",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis"
+        ]
+      },
+      "3": {
+        "ground_truth": "ISUP Grade 3 prostate cancer",
+        "candidates": [
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma high-grade",
+          "high-grade dysplasia",
+          "high grade prostatic intraepithelial neoplasia (HGPIN)",
+          "poorly differentiated carcinoma",
+          "lymph node macrometastasis"
+        ]
+      },
+      "4": {
+        "ground_truth": "ISUP Grade 4 prostate cancer",
+        "candidates": [
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "tubulovillous adenoma high-grade",
+          "glioblastoma",
+          "high-grade dysplasia",
+          "well differentiated carcinoma",
+          "lymph node macrometastasis",
+          "high grade prostatic intraepithelial neoplasia (HGPIN)"
+        ]
+      },
+      "5": {
+        "ground_truth": "ISUP Grade 5 prostate cancer",
+        "candidates": [
+          "ISUP Grade 5 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "glioblastoma",
+          "well differentiated carcinoma",
+          "high-grade serous ovarian carcinoma",
+          "invasive carcinoma",
+          "tubulovillous adenoma high-grade",
+          "lymph node macrometastasis",
+          "small cell carcinoma"
+        ]
+      }
+    },
+    "TCGA-GBMLGG": {
+      "LGG": {
+        "ground_truth": "low-grade glioma",
+        "candidates": [
+          "low-grade glioma",
+          "glioblastoma",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "tubular adenoma low-grade",
+          "low-grade dysplasia",
+          "lymph node micrometastasis",
+          "reactive gliosis",
+          "normal brain tissue",
+          "reactive gliosis"
+        ]
+      },
+      "GBM": {
+        "ground_truth": "glioblastoma",
+        "candidates": [
+          "glioblastoma",
+          "low-grade glioma",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "tubulovillous adenoma high-grade",
+          "lymph node macrometastasis",
+          "reactive gliosis",
+          "high-grade serous ovarian carcinoma",
+          "small cell carcinoma",
+          "invasive ductal carcinoma"
+        ]
+      }
+    },
+    "UNITOPATHO": {
+      "NORM": {
+        "ground_truth": "normal colon tissue",
+        "candidates": [
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "benign prostate tissue",
+          "normal lymph node",
+          "normal liver",
+          "normal lung tissue",
+          "benign breast tissue",
+          "benign thyroid tissue",
+          "normal skin",
+          "benign gastric mucosa"
+        ]
+      },
+      "HP": {
+        "ground_truth": "hyperplastic polyp",
+        "candidates": [
+          "hyperplastic polyp",
+          "normal colon tissue",
+          "tubular adenoma low-grade",
+          "tubulovillous adenoma low-grade",
+          "serrated adenoma",
+          "benign colorectal mucosa",
+          "tubular adenoma high-grade",
+          "inflammatory polyp",
+          "juvenile polyp",
+          "lymphoid polyp"
+        ]
+      },
+      "TA.LG": {
+        "ground_truth": "tubular adenoma low-grade",
+        "candidates": [
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "hyperplastic polyp",
+          "normal colon tissue",
+          "ISUP Grade 1 prostate cancer",
+          "low-grade glioma",
+          "serrated adenoma",
+          "tubulovillous adenoma high-grade",
+          "low-grade dysplasia"
+        ]
+      },
+      "TA.HG": {
+        "ground_truth": "tubular adenoma high-grade",
+        "candidates": [
+          "tubular adenoma high-grade",
+          "tubular adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "ISUP Grade 3 prostate cancer",
+          "high-grade dysplasia",
+          "invasive colorectal carcinoma",
+          "glioblastoma",
+          "poorly differentiated carcinoma",
+          "ISUP Grade 4 prostate cancer"
+        ]
+      },
+      "TVA.LG": {
+        "ground_truth": "tubulovillous adenoma low-grade",
+        "candidates": [
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "hyperplastic polyp",
+          "normal colon tissue",
+          "sessile serrated adenoma",
+          "Inflammatory polyp",
+          "ISUP Grade 1 prostate cancer",
+          "Inflammatory polyp"
+        ]
+      },
+      "TVA.HG": {
+        "ground_truth": "tubulovillous adenoma high-grade",
+        "candidates": [
+          "tubulovillous adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubular adenoma low-grade",
+          "invasive colorectal carcinoma",
+          "high-grade dysplasia",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "poorly differentiated carcinoma",
+          "ISUP Grade 3 prostate cancer"
+        ]
+      }
+    }
+  },
+  "set3_crossorgan": {
+    "CAMELYON16": {
+      "NORMAL": {
+        "ground_truth": "normal lymph node",
+        "candidates": [
+          "normal lymph node",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node with metastatic carcinoma ",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue"
+        ]
+      },
+      "TUMOR": {
+        "ground_truth": "lymph node with metastatic carcinoma",
+        "candidates": [
+          "lymph node with metastatic carcinoma",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue"
+        ]
+      }
+    },
+    "CAMELYON17": {
+      "NEGATIVE": {
+        "ground_truth": "normal lymph node",
+        "candidates": [
+          "normal lymph node",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "ITC": {
+        "ground_truth": "lymph node with isolated tumor cells",
+        "candidates": [
+          "lymph node with isolated tumor cells",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "MICRO": {
+        "ground_truth": "lymph node with micrometastasis",
+        "candidates": [
+          "lymph node with micrometastasis",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "MACRO": {
+        "ground_truth": "lymph node with macrometastasis",
+        "candidates": [
+          "lymph node with macrometastasis",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      }
+    },
+    "PANDA": {
+      "0": {
+        "ground_truth": "benign prostate tissue",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue"
+        ]
+      },
+      "1": {
+        "ground_truth": "ISUP Grade 1 prostate cancer",
+        "candidates": [
+          "ISUP Grade 1 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "benign prostate tissue"
+        ]
+      },
+      "2": {
+        "ground_truth": "ISUP Grade 2 prostate cancer",
+        "candidates": [
+          "ISUP Grade 2 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "benign prostate tissue"
+        ]
+      },
+      "3": {
+        "ground_truth": "ISUP Grade 3 prostate cancer",
+        "candidates": [
+          "ISUP Grade 3 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "benign prostate tissue"
+        ]
+      },
+      "4": {
+        "ground_truth": "ISUP Grade 4 prostate cancer",
+        "candidates": [
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "benign prostate tissue"
+        ]
+      },
+      "5": {
+        "ground_truth": "ISUP Grade 5 prostate cancer",
+        "candidates": [
+          "ISUP Grade 5 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "benign prostate tissue"
+        ]
+      }
+    },
+    "TCGA-GBMLGG": {
+      "LGG": {
+        "ground_truth": "low-grade glioma",
+        "candidates": [
+          "low-grade glioma",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "GBM": {
+        "ground_truth": "glioblastoma",
+        "candidates": [
+          "glioblastoma",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "lymph node metastasis",
+          "normal lymph node",
+          "colon adenocarcinoma",
+          "normal colon tissue",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      }
+    },
+    "UNITOPATHO": {
+      "NORM": {
+        "ground_truth": "normal colon tissue",
+        "candidates": [
+          "normal colon tissue",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "HP": {
+        "ground_truth": "hyperplastic polyp",
+        "candidates": [
+          "hyperplastic polyp",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "TA.LG": {
+        "ground_truth": "tubular adenoma low-grade",
+        "candidates": [
+          "tubular adenoma low-grade",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "TA.HG": {
+        "ground_truth": "tubular adenoma high-grade",
+        "candidates": [
+          "tubular adenoma high-grade",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "TVA.LG": {
+        "ground_truth": "tubulovillous adenoma low-grade",
+        "candidates": [
+          "tubulovillous adenoma low-grade",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      },
+      "TVA.HG": {
+        "ground_truth": "tubulovillous adenoma high-grade",
+        "candidates": [
+          "tubulovillous adenoma high-grade",
+          "benign prostate tissue",
+          "ISUP Grade 4 prostate cancer",
+          "glioblastoma",
+          "low-grade glioma",
+          "lymph node metastasis",
+          "normal lymph node",
+          "breast carcinoma",
+          "normal lung tissue",
+          "hepatocellular carcinoma"
+        ]
+      }
+    }
+  },
+  "set4_alldatasets": {
+    "CAMELYON16": {
+      "NORMAL": {
+        "ground_truth": "normal lymph node",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "TUMOR": {
+        "ground_truth": "lymph node metastasis",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "lymph node with necrotizing lymphadenitis",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      }
+    },
+    "CAMELYON17": {
+      "NEGATIVE": {
+        "ground_truth": "normal lymph node",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "lymph node with necrotizing lymphadenitis",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "ITC": {
+        "ground_truth": "lymph node isolated tumor cells",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "CAM16 normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "MICRO": {
+        "ground_truth": "lymph node micrometastasis",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "lymph node with necrotizing lymphadenitis",
+          "normal thyroid tissue",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "MACRO": {
+        "ground_truth": "lymph node macrometastasis",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node with necrotizing lymphadenitis ",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      }
+    },
+    "PANDA": {
+      "0": {
+        "ground_truth": "benign prostate tissue",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "1": {
+        "ground_truth": "ISUP Grade 1 prostate cancer",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "2": {
+        "ground_truth": "ISUP Grade 2 prostate cancer",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "3": {
+        "ground_truth": "ISUP Grade 3 prostate cancer",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "4": {
+        "ground_truth": "ISUP Grade 4 prostate cancer",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "5": {
+        "ground_truth": "ISUP Grade 5 prostate cancer",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      }
+    },
+    "TCGA-GBMLGG": {
+      "LGG": {
+        "ground_truth": "low-grade glioma",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "reactive gliosis",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "GBM": {
+        "ground_truth": "glioblastoma",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "lymph node with necrotizing lymphadenitis",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      }
+    },
+    "UNITOPATHO": {
+      "NORM": {
+        "ground_truth": "normal colon tissue",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "HP": {
+        "ground_truth": "hyperplastic polyp",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "TA.LG": {
+        "ground_truth": "tubular adenoma low-grade",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "TA.HG": {
+        "ground_truth": "tubular adenoma high-grade",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "TVA.LG": {
+        "ground_truth": "tubulovillous adenoma low-grade",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      },
+      "TVA.HG": {
+        "ground_truth": "tubulovillous adenoma high-grade",
+        "candidates": [
+          "benign prostate tissue",
+          "ISUP Grade 1 prostate cancer",
+          "ISUP Grade 2 prostate cancer",
+          "ISUP Grade 3 prostate cancer",
+          "ISUP Grade 4 prostate cancer",
+          "ISUP Grade 5 prostate cancer",
+          "normal colon tissue",
+          "hyperplastic polyp",
+          "tubular adenoma low-grade",
+          "tubular adenoma high-grade",
+          "tubulovillous adenoma low-grade",
+          "tubulovillous adenoma high-grade",
+          "normal lymph node",
+          "lymph node metastasis",
+          "lymph node isolated tumor cells",
+          "lymph node micrometastasis",
+          "lymph node macrometastasis",
+          "low-grade glioma",
+          "glioblastoma",
+          "normal lymph node"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "PANDA": {
+    "0": [
+      "Normal prostate tissue",
+      "Non-neoplastic prostatic glands",
+      "Histologically normal prostate core",
+      "Prostate tissue without carcinoma",
+      "Prostatic tissue within normal limits"
+    ],
+    "1": [
+      "Well-formed low-grade prostate adenocarcinoma",
+      "Low-grade acinar carcinoma of prostate with individual discrete well-formed glands",
+      "Prostate carcinoma with well-formed glands",
+      "Well-differentiated prostate cancer",
+      "ISUP Grade 1 prostatic adenocarcinoma"
+    ],
+    "2": [
+      "Predominantly well-formed prostate adenocarcinoma with focal poorly formed glands",
+      "Predominantly well-formed prostate adenocarcinoma with minor component of poorly formed glands",
+      "Acinar prostate cancer with focal emerging fused glands",
+      "ISUP Grade 2 prostatic adenocarcinoma",
+      "Prostate tumor with minor poorly formed glands"
+    ],
+    "3": [
+      "Poorly formed gland-predominant prostate adenocarcinoma",
+      "Prostate carcinoma with predominantly fused and cribriform glands",
+      "Acinar prostate cancer with predominant poorly formed glands",
+      "ISUP Grade 3 prostatic adenocarcinoma",
+      "Prostate tumor with dominant poorly formed gland architecture"
+    ],
+    "4": [
+      "High-grade prostate carcinoma with exclusively poorly formed glands",
+      "Prostatic adenocarcinoma composed of fused and cribriform glands only",
+      "Poorly formed malignant prostatic glands without lower-grade component",
+      "High-grade acinar carcinoma in prostate tissue without well-formed glands",
+      "High-grade gland-forming prostate malignancy with cribriform architecture only"
+    ],
+    "5": [
+      "Poorly differentiated prostate carcinoma without gland formation",
+      "High-grade prostatic malignancy with solid growth only",
+      "Prostate carcinoma with complete loss of glandular architecture",
+      "Aggressive prostatic tumor with cords and single cells",
+      "High grade prostate adenocarcinoma with marked necrosis"
+    ]
+  },
+  "UNITOPATHO": {
+    "Normal": [
+      "Colonic mucosa with no significant histological changes",
+      "Non-neoplastic colorectal tissue",
+      "Histologically normal colonic mucosa",
+      "Colorectal tissue without dysplasia",
+      "Benign colon epithelium without malignancy"
+    ],
+    "Hyperplastic Polyp (HP)": [
+      "Serrated hyperplastic colorectal polyp, with serrations limited to the upper half of the crypts",
+      "Benign serrated polyp of colon",
+      "Colorectal hyperplastic lesion with serrated crypts",
+      "Goblet cell-rich serrated colonic polyp",
+      "Hyperplastic polyp with saw-toothed architecture"
+    ],
+    "Tubular Adenoma, Low-Grade Dysplasia (TA.LG)": [
+      "Low-grade tubular adenoma of colon",
+      "Tubular colorectal adenoma with low-grade dysplasia",
+      "Colonic tubular adenoma with low-grade atypia",
+      "Low-grade dysplastic tubular colonic polyp",
+      "Tubular adenomatous colon polyp, low grade"
+    ],
+    "Tubular Adenoma, High-Grade Dysplasia (TA.HG)": [
+      "High-grade tubular adenoma of colon",
+      "Tubular colorectal adenoma with severe dysplasia",
+      "Colonic tubular adenoma with high-grade atypia",
+      "High-grade dysplastic tubular colonic polyp",
+      "Tubular adenomatous colon polyp, high grade"
+    ],
+    "Tubulovillous Adenoma, Low-Grade Dysplasia (TVA.LG)": [
+      "Low-grade tubulovillous adenoma of colon",
+      "Tubulovillous colorectal adenoma with low-grade dysplasia",
+      "Colonic tubulovillous adenoma with low-grade atypia",
+      "Low-grade dysplastic tubulovillous colonic polyp",
+      "Tubulovillous adenomatous colon polyp, low grade"
+    ],
+    "Tubulovillous Adenoma, High-Grade Dysplasia (TVA.HG)": [
+      "High-grade tubulovillous adenoma of colon",
+      "Tubulovillous colorectal adenoma with severe dysplasia",
+      "Colonic tubulovillous adenoma with high-grade atypia",
+      "High-grade dysplastic tubulovillous colonic polyp",
+      "Tubulovillous adenomatous colon polyp, high grade"
+    ]
+  },
+  "CAM16": {
+    "Normal": [
+      "Benign normal lymph node",
+      "Histologically normal lymph node",
+      "Lymph node without metastatic carcinoma",
+      "Non-neoplastic nodal tissue",
+      "Uninvolved lymph node"
+    ],
+    "Metastasis": [
+      "Metastatic carcinoma involving lymph node",
+      "Sentinel node involved by breast carcinoma",
+      "Nodal metastatic carcinoma",
+      "Lymph node with metastatic mammary carcinoma",
+      "Metastatic epithelial tumor in sentinel node"
+    ]
+  },
+  "CAM17": {
+    "Negative": [
+      "Negative lymph node",
+      "Benign lymph node without metastasis",
+      "Histologically uninvolved nodal tissue",
+      "Lymph node free of carcinoma",
+      "No metastatic tumor in lymph node"
+    ],
+    "Isolated Tumor Cells (ITC)": [
+      "Isolated tumor cells in lymph node",
+      "Rare carcinoma cells within nodal tissue",
+      "Tiny epithelial cell clusters in sentinel node",
+      "Minimal nodal tumor burden less than 200 tumor cells",
+      "Scattered isolated malignant cells in lymph node"
+    ],
+    "Micrometastasis": [
+      "Micrometastatic breast carcinoma in lymph node",
+      "Small metastatic deposit in sentinel node",
+      "Nodal micrometastasis from breast carcinoma",
+      "Limited metastatic carcinoma in lymph node",
+      "Small-volume nodal metastatic tumor"
+    ],
+    "Macrometastasis": [
+      "Macrometastatic breast carcinoma in lymph node",
+      "Large metastatic deposit in sentinel node",
+      "Nodal macrometastasis from breast carcinoma",
+      "Extensive metastatic carcinoma in lymph node",
+      "Large-volume nodal metastatic tumor"
+    ]
+  },
+  "TCGA-GBMLGG": {
+    "Low-Grade Glioma (LGG)": [
+      "Diffuse low-grade glioma",
+      "Lower-grade infiltrating glioma",
+      "Glioma lacking glioblastoma features",
+      "Low-grade glial neoplasm",
+      "Diffuse glioma without GBM morphology"
+    ],
+    "Glioblastoma (GBM)": [
+      "Glioblastoma with necrosis and microvascular proliferation",
+      "High-grade astrocytic tumor consistent with glioblastoma",
+      "Malignant glioma with glioblastoma morphology",
+      "Glioblastoma, IDH-wildtype-type morphology",
+      "Aggressive astrocytic neoplasm with necrosis"
+    ]
+  }
+}

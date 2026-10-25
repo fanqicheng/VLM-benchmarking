@@ -1,0 +1,76 @@
+{
+  "PANDA": {
+    "0": [
+      "Benign prostate tissue with normal gland architecture, uniform small glands, smooth luminal contours, and no nuclear atypia. Stroma is non-reactive and orderly. No evidence of carcinoma"
+    ],
+    "1": [
+      "Low-grade prostate cancer with well-formed glands. Tumor glands are still round, separate, and organized. Minimal infiltration into surrounding tissue. Mild nuclear atypia but recognizable glandular structures. No fused or cribriform patterns."
+    ],
+    "2": [
+      "Predominantly well-formed glands (pattern 3) with a secondary component of poorly formed or fused small glands (pattern 4). Early architectural disorder, some poorly formed glands beginning to appear."
+    ],
+    "3": [
+      "Predominantly poorly formed, fused, or cribriform glands (pattern 4) with a smaller component of well-formed glands (pattern 3). Architectural disorganization more prominent. Increased nuclear atypia."
+    ],
+    "4": [
+      "High-grade prostate cancer composed almost entirely of fused glands, poorly formed glands, or cribriform structures. Marked architectural disruption and significant nuclear atypia. No well-formed glands remain."
+    ],
+    "5": [
+      "Highest-grade prostate cancer with solid sheets of tumor cells, single-cell infiltration, cords, or comedonecrosis. Complete loss of glandular structure. Highly aggressive morphology with marked atypia"
+    ]
+  },
+
+  "UNITOPATHO": {
+    "NORM": [
+      "benign colorectal tissue with no dysplasia or malignancy"
+    ],
+    "HP": [
+      "Hyperplastic polyps are those in which the epithelial cells, although benign, begin to outgrow their available space. The glands have an increased number of goblet cells and therefore look pale or cleared out next to normal epithelium, and there tends to be a thickened or sclerotic-appearing basement membrane under the neoplastic cells. Because the surface area is outgrowing the lamina propria, hyperplastic polyps take on a distinctive frilly or lacy appearance. Crypts cut in cross section have a distinctive star-shaped lumen, also called serrated architecture."
+    ],
+    "TA.LG": [
+      "tubular adenoma of the colon with low-grade dysplasia and predominantly tubular glands with relatively smooth, parallel crypt architecture"
+    ],
+    "TA.HG": [
+      "tubular adenoma of the colon with high-grade dysplasia, showing back-to-back or cribriform glands and marked cytologic atypia"
+    ],
+    "TVA.LG": [
+      "tubulovillous adenoma of the colon with mixed tubular and villous architecture and low-grade cytologic atypia"
+    ],
+    "TVA.HG": [
+      "tubulovillous adenoma with high-grade intraepithelial neoplasia and complex fused glandular architecture"
+    ]
+  },
+
+  "CAMELYON16": {
+    "NORMAL": [
+      "A benign lymph node with intact architecture and no metastatic breast carcinoma or tumor cell clusters."
+    ],
+    "METASTASIS": [
+      "A lymph node containing metastatic breast carcinoma that forms disruptive nests or clusters effacing normal nodal architecture."
+    ]
+  },
+
+  "CAMELYON17": {
+    "NEGATIVE": [
+      "A benign lymph node with preserved architecture and no metastatic carcinoma, including no isolated tumor cells, micrometastases, or macrometastases."
+    ],
+    "ITC": [
+      "A lymph node containing only isolated tumor cells—single cells or tiny clusters under 0.2 mm—without architectural distortion."
+    ],
+    "MICRO": [
+      "A lymph node with micrometastatic breast carcinoma, showing small tumor deposits between 0.2–2 mm without major architectural effacement."
+    ],
+    "MACRO": [
+      "A lymph node with macrometastatic breast carcinoma, featuring tumor deposits larger than 2 mm that markedly distort or replace normal nodal architecture."
+    ]
+  },
+
+  "TCGA-GBMLGG": {
+    "LGG": [
+      "glioma without features of glioblastoma"
+    ],
+    "GBM": [
+      "malignant astrocytoma demonstrating necrosis and/or microvascular proliferation characteristic of glioblastoma"
+    ]
+  }
+}
